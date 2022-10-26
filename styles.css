@@ -3,29 +3,63 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+    height: 100vh;
 }
 
+.container {
+    padding-top: 50px;
+}
 .calculator {
     display: flex;
     flex-direction: column;
     height: 500px;
     width: 300px;
     background-color: #233d4d;
-    padding: 25px 15px;
-    gap: 10px;
+    padding: 40px 15px 25px 15px;
+    gap: 30px;
+    border-radius: 30px;
     
 }
 
+/* display styling  ================================================================*/
 .display {
     background-color: #a1c181;
-    height: 150px;
+    height: 110px;
     flex-shrink: 0;
+    padding: 10px 15px;
+    border-radius: 30px;
 }
 
+.calculationDisplay {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    height: 100%;
+    justify-items: center;
+    gap: 10px;
+
+}
+
+.lastDisplay,
+.currentDisplay {
+    flex-grow: 1;
+    display: block;
+}
+
+.lastDisplay {
+    font-size: 20px;
+}
+
+.currentDisplay {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* button styling========================================= */
 .allButtons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
     column-gap: 10px;
     row-gap: 10px;
     flex-grow: 1;
@@ -35,4 +69,14 @@ button.equals {
     grid-column: 3/5;
 }
 
+button {
+    border-radius: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    transition-duration: 0s;
+    background-color: rgb(255, 255, 255);
+}
 
+button:hover {
+    background-color: rgba(255, 255, 255, 0.637);
+}
